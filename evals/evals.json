@@ -1,0 +1,35 @@
+{
+  "skill_name": "gleam-fullstack",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Crea un nuevo proyecto fullstack en Gleam para una aplicación de gestión de tareas. Necesito autenticación con roles (admin y usuario normal), CRUD de tareas, y que sea type-safe de punta a punta. Usa PostgreSQL para la base de datos.",
+      "expected_output": "Proyecto scaffolding con estructura de monorepo (client/server/shared), dominio auth con roles, dominio tasks, migraciones SQL, queries type-safe con Squirrel, JWT auth, y Makefile con comandos de desarrollo. Debe usar 'gleam add' para todas las dependencias, NUNCA editar gleam.toml manualmente, y usar el formato estándar con [dependencies] y [dev-dependencies] secciones.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Tengo un proyecto Gleam fullstack existente y quiero agregar un nuevo dominio para 'invoices' (facturación). Debe incluir: tipos compartidos, handlers, servicio, queries SQL, y tests. Sigue la arquitectura vertical.",
+      "expected_output": "Nuevo directorio server/src/invoices/ con types.gleam, handlers.gleam, service.gleam, queries/, tests/. También shared/src/shared/invoices.gleam y client/src/invoices/views.gleam. Debe seguir las mejores prácticas de los ejemplos de Lustre.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Necesito implementar un sistema de permisos más granular en mi app Gleam. Actualmente tengo roles básicos (admin, editor, viewer) pero quiero agregar permisos específicos como: CreateProjects, DeleteProjects, AssignTasks, ViewReports. Cómo debería estructurarlo siguiendo la arquitectura vertical?",
+      "expected_output": "Extensión del dominio auth con nuevos tipos de permisos, función has_permission actualizada, middleware de autorización, y ejemplos de uso en handlers",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Quiero agregar una nueva dependencia 'modem' a mi proyecto cliente en Gleam. Cómo debo hacerlo?",
+      "expected_output": "Debe responder: 'cd client && gleam add modem'. NUNCA sugerir editar gleam.toml manualmente. Debe usar restricciones de versión apropiadas.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Necesito actualizar las versiones de las dependencias en mi proyecto Gleam fullstack porque tengo conflictos de versiones. Qué debo hacer?",
+      "expected_output": "Debe sugerir usar 'gleam add' con restricciones de versión correctas, verificar el paquete Lustre en /home/svarona/Development/lustre/gleam.toml para las versiones más actuales, y NUNCA editar gleam.toml manualmente.",
+      "files": []
+    }
+  ]
+}
